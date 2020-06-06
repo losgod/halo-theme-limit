@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "CodeFont";
+    font-style: normal;
+    font-weight: normal;
+    src: local("JetBrains Mono"), url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    unicode-range: U+0-7F;
+}
+
+@font-face {
+    font-family: "CodeFont";
+    font-style: italic;
+    font-weight: normal;
+    src: url("../fonts/JetBrainsMono-Italic.woff2") format("woff2");
+    unicode-range: U+0-7F;
+}
+
+@font-face {
+    font-family: "CodeFont";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/JetBrainsMono-Bold.woff2") format("woff2");
+    unicode-range: U+0-7F;
+}
