@@ -1,31 +1,42 @@
+<#-- Page Macro -->
 <#macro layout title>
-    <!doctype html>
+    <!DOCTYPE html>
     <html lang="zh-cn">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>${title!}</title>
 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="renderer" content="webkit">
-        <meta name="author" content="${user.nickname!}" />
-        <meta name="keywords" content="${meta_keywords!}"/>
-        <meta name="description" content="${meta_description!}" />
+        <meta name="keywords" content="${meta_keywords}"/>
+        <meta name="description" content="${meta_description}">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Loading Style -->
+        <link rel="stylesheet" href="${theme_base!}/assets/css/index.css"/>
 
-        <link rel="stylesheet" href="${theme_base!}/assets/css/font.css">
-        <link rel="stylesheet" href="${theme_base!}/assets/css/index.css">
+        <#-- Code Style -->
+        <link rel="stylesheet"
+              href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/solarized-light.min.css">
+        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+
+        <!-- Loading JavaScript Library -->
+        <script src="//cdn.jsdelivr.net/npm/marked@1.1.1/marked.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/gsap@2.1.3/umd/TweenMax.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/scrollmagic@2.0.7/scrollmagic/minified/ScrollMagic.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/scrollmagic@2.0.7/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+
+        <!-- Loading When Dev -->
+        <script src="//cdn.jsdelivr.net/npm/scrollmagic@2.0.7/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 
         <@global.head />
     </head>
     <body>
-    <#nested >
-    <@global.statistics />
 
+    <#-- Page Main Content -->
+    <#nested >
+
+    <@global.footer />
     </body>
     </html>
 </#macro>

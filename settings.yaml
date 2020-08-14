@@ -1,3 +1,68 @@
+index:
+  label: 首页设置
+  items:
+    title:
+      name: title
+      label: 首页标题
+      type: text
+      placeholder: '首页标题'
+    subtitle:
+      name: subtitle
+      label: 首页子标题
+      type: text
+      placeholder: '首页子标题'
+    index_cover:
+      name: index_cover
+      label: 首页头部装饰图
+      type: attachment
+      default: https://s1.ax1x.com/2020/08/12/ajBvxf.jpg
+    custom_info:
+      name: custom_info
+      label: 自定义信息
+      type: attachment
+      description: '类似 GitHub Profile Readme, 传入 MarkDown 文件, 或者直接将你的 GitHub Profile Readme 地址写上去。'
+    default_pic:
+      name: default_pic
+      label: 默认图片
+      type: attachment
+      default: https://s1.ax1x.com/2020/08/12/ajBzM8.jpg
+      description: '网站默认图片, 所有使用图片的位置, 如果没有设置, 将默认为此图片。'
+website:
+  label: 网站设置
+  items:
+    icp:
+      name: icp
+      label: 'ICP 备案号'
+      type: text
+      placeholder: '填入 ICP 备案号，没有则不填. '
+    TimeStatistics:
+      name: TimeStatistics
+      label: '网站运行时间'
+      type: text
+      description: '填入起始时间，格式：月/日/年 时:分:秒，如10/01/2019 12:00:00'
+cover:
+  label: 网站图片设置
+  items:
+    archives_cover:
+      name: archives_cover
+      label: 归档页大图
+      type: attachment
+      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
+    journals_cover:
+      name: journals_cover
+      label: 日志页大图
+      type: attachment
+      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
+    category_cover:
+      name: category_cover
+      label: 分类页大图
+      type: attachment
+      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
+    search_cover:
+      name: search_cover
+      label: 查询页大图
+      type: attachment
+      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
 sns:
   label: 社交资料
   items:
@@ -16,44 +81,24 @@ sns:
       name: weibo
       label: 微博
       type: text
-      placeholder: '只需填入微博 Id 即可'
+      placeholder: '需填入 微博 用户完整地址'
+    zhihu:
+      name: zhihu
+      label: 知乎
+      type: text
+      placeholder: '需填入 知乎 用户完整地址'
+    github:
+      name: github
+      label: Github
+      type: text
+      placeholder: '需填入 Github 用户完整地址'
     email:
       name: email
       label: Email
       type: text
       placeholder: '只需填入邮箱地址即可'
-    github:
-      name: github
-      label: Github
-      type: text
-      placeholder: '只需填入 Github 用户名即可'
     qq:
       name: qq
       label: QQ
       type: text
       placeholder: '只需填入 QQ 号即可'
-    telegram:
-      name: telegram
-      label: Telegram
-      type: text
-      placeholder: '只需填入 Telegram Id 即可'
-style:
-  label: 样式设置
-  items:
-    scrollbar:
-      name: scrollbar
-      label: 全局滚动条颜色
-      type: color
-      default: '#3798e8'
-    code_pretty:
-      name: code_pretty
-      label: 文章代码高亮主题
-      type: select
-      default: ''
-      options:
-        - value: ''
-          label: '无'
-        - value: '-solarizedlight'
-          label: 'Solarized Light'
-        - value: '-tomorrow'
-          label: 'Tomorrow'

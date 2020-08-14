@@ -1,0 +1,167 @@
+.markdown {
+  font-size: 20px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
+
+  font-family: 'CodeFont', monospace, sans-serif;
+  color: var(--main-font-color);
+
+  line-height: 1.8;
+  letter-spacing: 2px;
+
+  // Page Title Style
+  h1, h2, h3 {
+    margin: 0.5em 0 0.5em;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    font-weight: bolder;
+
+    &:before {
+      content: '\00A7  ';
+    }
+  }
+
+  h4, h5, h6 {
+    margin: 0.5em 0 0.5em;
+    text-align: left;
+
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.6em;
+  }
+
+  h4 {
+    font-size: 1.4em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  a {
+    color: var(--link-font-color);
+
+    border-bottom: 1px solid var(--link-font-color);
+
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+
+  // Blockquote
+  blockquote {
+    margin: 0.5em 0;
+    padding: 0.2em 0.6em;
+    border-left: 4px solid #222222;
+    background-color: #cccccc;
+
+    font-size: 0.9em;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  blockquote p {
+    padding: .2rem 1.5rem;
+  }
+
+  blockquote blockquote {
+    padding-right: 0;
+  }
+
+  // List Style
+  ul, ol {
+    margin: 0.2em 0 0.2em 3em;
+  }
+
+  ul ul, ul ol, ol ol, ol ul {
+    margin-left: 1em;
+  }
+
+  // Table Style
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    margin: 0.5em 0;
+
+    thead {
+      background-color: #cccccc;
+
+      tr > th {
+        border: 1px solid #999999;
+      }
+    }
+
+    tbody {
+      tr:nth-child(2n) {
+        background-color: #eeeeee;
+      }
+
+      tr > td {
+        border: 1px solid #999999;
+      }
+    }
+  }
+
+  // Code Style
+  pre {
+    margin: 0.5em 0;
+    border-radius: 6px;
+  }
+  pre, code, pre code {
+    font-family: 'CodeFont', Consolas, monospace, sans-serif;
+    overflow-x: scroll;
+  }
+
+  p {
+    margin: 0.5em 0;
+    font-size: 1em;
+  }
+
+  hr {
+    margin: 0.5em 0;
+    border: 1px solid #cccccc;
+  }
+
+  mark {
+    background: yellow;
+  }
+
+  figure {
+    margin: .5em auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  // Img Style
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  figcaption {
+    text-align: center;
+    margin: .5rem auto;
+  }
+
+  iframe {
+    max-width: 100%;
+    display: block;
+    margin: 0.5em auto;
+  }
+}

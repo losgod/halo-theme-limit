@@ -1,13 +1,34 @@
+<#import "module/cover.ftl" as cover>
+
 <#include "module/macro.ftl">
 <@layout title="${blog_title!}">
-<div class="main">
-    <#if is_index??>
-        <h1 style="font-weight: bolder">Hello World 0</h1>
-    </#if>
-    <pre style="font-family: 'CodeFont'; font-size: large">
-        <code style="font-family: 'CodeFont'; font-size: large; font-weight: bolder;">console.log(1234567890);</code>
-    </pre>
-    <div>测试模板文件</div>
-    <h2>测试文件能否正常加载</h2>
-</div>
+
+<#-- Top Menu -->
+    <#include "module/menu.ftl">
+
+<#-- Page Cover -->
+    <@cover.layout img="${settings.index_cover!}" title="${settings.title!blog_title}" subtitle="${settings.subtitle!}" />
+
+    <main>
+        <#if settings.custom_info??>
+            <section id="info" class="container">
+                <div id="customInfo" class="markdown"></div>
+            </section>
+            <hr class="container">
+        </#if>
+
+        <section id="articles">
+            <#-- 文章列表 -->
+            <#include "module/list-style.ftl">
+        </section>
+
+        <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
+            <#include "module/pagination.ftl">
+        </@paginationTag>
+    </main>
+
+<#-- Page Footer -->
+    <#include "module/footer.ftl">
+
+    <#include "module/script.ftl">
 </@layout>
