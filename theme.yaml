@@ -1,11 +1,11 @@
-id: demo
-name: Demo
+id: halo-theme-limit
+name: limit
 author:
   name: losgod
   website: https://losgod.xin
 description: 用于开发自有主题的基础内容
-logo: http://cn.gravatar.com/avatar/a0a99550658c1738878835894e3cee41?s=256&d=mm
-website: 主题地址，可填写为 git 仓库地址
-repo: 主题 git 仓库地址，如有填写，后台可在线更新
-version: 0.0.1
+logo:
+website: https://github.com/losgod/halo-theme-limit.git
+repo: https://github.com/losgod/halo-theme-limit.git
+version: 0.6.4
 require: 1.3.0
