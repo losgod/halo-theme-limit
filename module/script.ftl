@@ -23,6 +23,6 @@
 <script>
     /* Custom Script */
     window.addEventListener('load', () => {
-        console.clear();
+        // console.clear();
     });
 </script>

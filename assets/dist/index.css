@@ -65,23 +65,22 @@ body {
 }
 /* 统一容器 */
 .container {
-  width: 96%;
   max-width: 1000px;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1200px) {
   .container {
-    width: 94%;
+    width: 86%;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .container {
     width: 90%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 768px) {
   .container {
-    width: 70%;
+    width: 96%;
   }
 }
 /* 自定义图标字体 */
@@ -124,9 +123,8 @@ header#menu {
   width: 100%;
   line-height: 4rem;
   color: var(--black-font-color);
-  background-color: rgba(255, 251, 240, 0.3);
-  backdrop-filter: saturate(180%) blur(20px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 251, 240);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 header#menu div.container {
   display: flex;
@@ -156,6 +154,7 @@ header#menu div.container ul#pageMenu li {
 header#menu div.container ul#pageMenu li a {
   position: relative;
   display: inline-block;
+  width: 100%;
   color: var(--main-font-color);
   border: none;
 }
@@ -269,7 +268,7 @@ header#welcome .cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 header#welcome .title {
   position: relative;
@@ -433,6 +432,11 @@ main section#post-pagination div.next-post {
   main section#post-pagination div.prev-post span.iconfont,
   main section#post-pagination div.next-post span.iconfont {
     display: none;
+  }
+  main section#post-pagination div.prev-post a,
+  main section#post-pagination div.next-post a {
+    display: inline-block;
+    width: 100%;
   }
   main section#post-pagination div.prev-post a:before {
     content: '上一篇: ';
@@ -627,23 +631,34 @@ footer div.badge div.github-badge a span.badge-value {
   background-color: #cccccc;
 }
 .markdown table thead tr > th {
+  padding: 0.2em 0.5em;
   border: 1px solid #999999;
 }
 .markdown table tbody tr:nth-child(2n) {
   background-color: #eeeeee;
 }
 .markdown table tbody tr > td {
+  padding: 0.2em 0.5em;
   border: 1px solid #999999;
 }
 .markdown pre {
   margin: 0.5em 0;
   border-radius: 6px;
 }
+.markdown pre > code.hljs:hover {
+  cursor: copy;
+  background-color: #fff2cf;
+}
 .markdown pre,
 .markdown code,
 .markdown pre code {
   font-family: 'CodeFont', Consolas, monospace, sans-serif;
   overflow-x: scroll;
+}
+.markdown code:not(.hljs) {
+  padding: 0.2em 0.5em;
+  background-color: #dddddd;
+  border-radius: 6px;
 }
 .markdown p {
   margin: 0.5em 0;
@@ -673,5 +688,8 @@ footer div.badge div.github-badge a span.badge-value {
   max-width: 100%;
   display: block;
   margin: 0.5em auto;
+}
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=index.css.map */

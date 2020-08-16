@@ -103,6 +103,7 @@
       background-color: #cccccc;
 
       tr > th {
+        padding: 0.2em 0.5em;
         border: 1px solid #999999;
       }
     }
@@ -113,6 +114,7 @@
       }
 
       tr > td {
+        padding: 0.2em 0.5em;
         border: 1px solid #999999;
       }
     }
@@ -123,9 +125,19 @@
     margin: 0.5em 0;
     border-radius: 6px;
   }
+  pre > code.hljs:hover {
+    cursor: copy;
+    background-color: #fff2cf;
+  }
   pre, code, pre code {
     font-family: 'CodeFont', Consolas, monospace, sans-serif;
     overflow-x: scroll;
+  }
+
+  code:not(.hljs) {
+    padding: 0.2em 0.5em;
+    background-color: #dddddd;
+    border-radius: 6px;
   }
 
   p {

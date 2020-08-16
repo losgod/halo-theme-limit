@@ -22,6 +22,24 @@ document.querySelector('span.more').onclick = function () {
     menu.classList.contains('show') ? menu.classList.remove('show') : menu.classList.add('show');
 };
 
+// Pre Code Add Copy Function
+function codeCopy() {
+    document.querySelectorAll('pre > code').forEach(item => {
+        item.onclick = function () {
+            try {
+                const range = document.createRange();
+                range.selectNode(item);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+            } catch (e) {
+                console.error('复制失败')
+            }
+        };
+    });
+}
+
 /* ================= 页面动画 ================== */
 
 // 页面封面 视差效果
@@ -90,6 +108,7 @@ function getCustomContent(url) {
         .then(res => {
             document.querySelector('div#customInfo').innerHTML = marked(res);
             hljs.initHighlighting();
+            codeCopy();
         })
         .catch(err => {
             document.querySelector('section#info').style.display = 'none';
@@ -126,5 +145,6 @@ window.addEventListener('load', () => {
 
     mainScroll();
 
+    codeCopy();
     highlightMenu();
 });

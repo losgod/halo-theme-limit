@@ -85,18 +85,18 @@ body {
 
 /* 统一容器 */
 .container {
-  width: 96%;
+  //width: 96%;
   max-width: 1000px;
   margin: 0 auto;
 
-  @media screen and (min-width: 768px) {
-    width: 94%;
+  @media screen and (max-width: 1200px) {
+    width: 86%;
   }
-  @media screen and (min-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     width: 90%;
   }
-  @media screen and (min-width: 1200px) {
-    width: 70%;
+  @media screen and (max-width: 768px) {
+    width: 96%;
   }
 }
 
@@ -148,9 +148,12 @@ header#menu {
   line-height: 4rem;
 
   color: var(--black-font-color);
-  background-color: rgba(255, 251, 240, 0.3); // 茶白 30%
-  backdrop-filter: saturate(180%) blur(20px); // 背景高斯模糊
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  //background-color: rgba(255, 251, 240, 0.7); // 茶白 70%
+  //backdrop-filter: saturate(180%) blur(20px); // 背景高斯模糊
+
+  background-color: rgba(255, 251, 240); // 茶白
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
   div.container {
     display: flex;
@@ -184,6 +187,8 @@ header#menu {
         a {
           position: relative;
           display: inline-block;
+
+          width: 100%;
 
           color: var(--main-font-color);
           border: none;
@@ -231,6 +236,7 @@ header#menu {
 
       .search {
         height: 100%;
+
         label {
           padding-bottom: 0.25rem;
           border-bottom: 1px solid var(--black-font-color);
@@ -239,6 +245,7 @@ header#menu {
             cursor: pointer;
             border: none;
             background: none;
+
             &:focus {
               outline: none;
             }
@@ -327,7 +334,7 @@ header#welcome {
       height: 100%;
       object-fit: cover;
 
-      opacity: 0.8;
+      opacity: 0.5;
     }
   }
 
@@ -526,6 +533,7 @@ main {
 
     @media screen and (max-width: 767px) {
       flex-direction: column;
+      //justify-content: center;
 
       div.prev-post, div.next-post {
         width: 100%;
@@ -533,6 +541,11 @@ main {
 
         & span.iconfont {
           display: none;
+        }
+
+        a {
+          display: inline-block;
+          width: 100%;
         }
       }
 
@@ -674,3 +687,7 @@ footer {
 
 /* WebSite Markdown Style */
 @import "markdown.less";
+
+.hidden {
+  display: none;
+}
