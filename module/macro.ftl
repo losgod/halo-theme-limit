@@ -13,7 +13,7 @@
         <meta name="description" content="${meta_description}">
 
         <!-- Loading Style -->
-        <link rel="stylesheet" href="${theme_base!}/assets/css/index.css"/>
+        <link rel="stylesheet" href="${theme_base!}/assets/dist/index.css"/>
 
         <#-- Code Style -->
         <link rel="stylesheet"

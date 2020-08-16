@@ -56,7 +56,7 @@
         </div>
         <#if settings.TimeStatistics??>
             <div class="github-badge">
-                <a rel="license" href="javascript:void(0);" target="_blank">
+                <a rel="license" href="javascript:void(0);">
                     <span class="badge-subject">Running</span>
                     <span id="running" class="badge-value"></span>
                 </a>
