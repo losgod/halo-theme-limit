@@ -22,6 +22,23 @@ document.querySelector('span.more').onclick = function () {
     menu.classList.contains('show') ? menu.classList.remove('show') : menu.classList.add('show');
 };
 
+// Page Menu Search Button Controller
+function searchController() {
+    const search = document.querySelector('form#search');
+
+    document.querySelector('a#searchBtn').onclick = function () {
+        const mobileMenu = document.querySelector('ul#pageMenu');
+        if (mobileMenu.classList.contains('show')) {
+            mobileMenu.classList.remove('show');
+        }
+        search.classList.remove('hidden');
+        search.querySelector('input').focus();
+    };
+    search.querySelector('div.mask').addEventListener('click', function () {
+        search.classList.add('hidden');
+    });
+}
+
 // Pre Code Add Copy Function
 function codeCopy() {
     document.querySelectorAll('pre > code').forEach(item => {
@@ -143,6 +160,7 @@ window.addEventListener('load', () => {
         titleScroll();
     }
 
+    searchController();
     mainScroll();
 
     codeCopy();
