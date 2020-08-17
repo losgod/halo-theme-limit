@@ -43,12 +43,6 @@
             </a>
         </div>
         <div class="github-badge">
-            <a rel="license" href="https://baozi.fun/" target="_blank">
-                <span class="badge-subject">Based</span>
-                <span class="badge-value">Xue</span>
-            </a>
-        </div>
-        <div class="github-badge">
             <a rel="license" href="https://losgod.xin" target="_blank">
                 <span class="badge-subject">Designed</span>
                 <span class="badge-value">Losgod</span>

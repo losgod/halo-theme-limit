@@ -8,7 +8,7 @@
     getCustomContent('${settings.custom_info}');
     </#if>
     window.addEventListener('load', () => {
-        <#if is_index?? || is_archives?? || is_category?? || is_tag?? || is_search??>
+        <#if is_index?? || is_category?? || is_tag?? || is_search??>
         postListScroll();
         </#if>
     });

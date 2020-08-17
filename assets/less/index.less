@@ -53,7 +53,7 @@
 
   --background-color: #ffffff; // 背景
 
-  --background-height: 60vh; // 背景高度
+  --background-height: 100vh; // 背景高度
 }
 
 /* 清除所有标签的 margin padding */
@@ -151,8 +151,7 @@ header#menu {
 
   //background-color: rgba(255, 251, 240, 0.7); // 茶白 70%
   //backdrop-filter: saturate(180%) blur(20px); // 背景高斯模糊
-
-  background-color: rgba(255, 251, 240); // 茶白
+  background-color: var(--background-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
   div.container {
@@ -181,7 +180,7 @@ header#menu {
       list-style-type: none;
 
       li {
-        margin: 0 1rem;
+        margin-left: 1.5rem;
 
         // Top Menu Style
         a {
@@ -503,14 +502,28 @@ main {
 
       list-style: none;
 
+      margin-left: 1rem;
       border-left: 1px solid #dddddd;
 
       li {
-        height: 4rem;
-        line-height: 4rem;
+        display: flex;
+        flex-direction: row;
 
-        padding-left: 1rem;
+        line-height: 2rem;
+        padding: 0.5rem 0 0.5rem 1rem;
+        //padding-left: 1rem;
         border-bottom: 1px dashed #777777;
+
+        span {
+          font-size: 0.7rem;
+          margin-right: 0.3rem;
+        }
+
+        a {
+          text-decoration: underline;
+          border: none;
+          line-height: 2rem;
+        }
       }
     }
   }

@@ -68,6 +68,11 @@ cover:
       label: 查询页大图
       type: attachment
       default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
+    tag_cover:
+      name: tag_cover
+      label: 标签页大图
+      type: attachment
+      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
 sns:
   label: 社交资料
   items:

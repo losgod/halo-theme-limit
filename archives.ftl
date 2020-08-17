@@ -18,7 +18,7 @@
                     <ul>
                         <#list archive.posts?sort_by("createTime")?reverse as post>
                             <li>
-                                <span>${post.createTime?date}</span>
+                                <span>${post.createTime?string("MM.dd")}</span>
                                 <a href="${post.fullPath!}">${post.title!}</a>
                             </li>
                         </#list>

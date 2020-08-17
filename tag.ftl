@@ -7,14 +7,14 @@
 
 <#-- Page Cover -->
     <#import "module/cover.ftl" as cover>
-    <@cover.layout img="${category.thumbnail!settings.category_cover}" title="${category.name!}" subtitle="${category.description!}" />
+    <@cover.layout img="${settings.tag_cover!}" title="${tag.name!}" subtitle="" />
 
     <main>
         <section id="articles">
             <#-- 文章列表 -->
             <#include "module/list-style.ftl">
         </section>
-        <@paginationTag method="categoryPosts" page="${posts.number}" total="${posts.totalPages}" display="3" slug="${category.slug!}">
+        <@paginationTag method="tagPosts" page="${posts.number}" total="${posts.totalPages}" display="3" slug="${tag.slug!}">
             <#include "module/pagination.ftl">
         </@paginationTag>
     </main>

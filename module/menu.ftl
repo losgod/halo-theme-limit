@@ -10,16 +10,19 @@
         <!-- TODO: 遍历 页面菜单 -->
         <ul id="pageMenu">
             <@menuTag method="list">
-                <#list menus as menu>
+<#--                <#list menus as menu>-->
+                <#list menus?sort_by("priority") as menu>
                     <li><a href="${menu.url!}" target="${menu.target!}">${menu.name!}</a></li>
                 </#list>
             </@menuTag>
-            <form method="get" class="search" action="/search">
-                <label>
-                    <button type="submit" class="iconfont">&#xe8b9;</button>
-                    <input type="text" name="keyword" placeholder="Search"/>
-                </label>
-            </form>
+            <li><a id="searchBtn" href="javascript:void(0);" class="iconfont">&#xe8b9;</a></li>
         </ul>
     </div>
 </header>
+
+<form id="search" method="get" class="hidden" action="/search">
+    <label>
+        <button type="submit" class="iconfont">&#xe8b9;</button>
+        <input type="text" name="keyword" placeholder="Search"/>
+    </label>
+</form>

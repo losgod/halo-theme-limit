@@ -40,7 +40,7 @@
   --subtitle-font-color: var(--gray-font-color);
   --link-font-color: var(--green-font-color);
   --background-color: #ffffff;
-  --background-height: 60vh;
+  --background-height: 100vh;
 }
 /* 清除所有标签的 margin padding */
 * {
@@ -123,7 +123,7 @@ header#menu {
   width: 100%;
   line-height: 4rem;
   color: var(--black-font-color);
-  background-color: rgba(255, 251, 240);
+  background-color: var(--background-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 header#menu div.container {
@@ -149,7 +149,7 @@ header#menu div.container ul#pageMenu {
   list-style-type: none;
 }
 header#menu div.container ul#pageMenu li {
-  margin: 0 1rem;
+  margin-left: 1.5rem;
 }
 header#menu div.container ul#pageMenu li a {
   position: relative;
@@ -399,13 +399,24 @@ main section#archives ul {
   display: flex;
   flex-direction: column;
   list-style: none;
+  margin-left: 1rem;
   border-left: 1px solid #dddddd;
 }
 main section#archives ul li {
-  height: 4rem;
-  line-height: 4rem;
-  padding-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  line-height: 2rem;
+  padding: 0.5rem 0 0.5rem 1rem;
   border-bottom: 1px dashed #777777;
+}
+main section#archives ul li span {
+  font-size: 0.7rem;
+  margin-right: 0.3rem;
+}
+main section#archives ul li a {
+  text-decoration: underline;
+  border: none;
+  line-height: 2rem;
 }
 main section#post-pagination {
   display: flex;
