@@ -1,7 +1,7 @@
-
+<#-- Custom Links -->
 <#include "module/macro.ftl">
-<#-- Post Page Template -->
-<@layout title="${sheet.title} - ${blog_title!}">
+
+<@layout title="${sheet.title!} - ${blog_title!}">
 
 <#-- Top Menu -->
     <#include "module/menu.ftl">
@@ -11,6 +11,19 @@
     <@cover.layout img="${sheet.thumbnail!}" title="${sheet.title}" subtitle="" />
 
     <main>
+        <section id="links" class="container">
+            <ul>
+                <@linkTag method="list">
+                    <#list links?sort_by('createTime') as link>
+                        <li>
+                            <a href="${link.url!}">${link.name!}</a>
+                            <span>-${link.logo!}-</span>
+                        </li>
+                    </#list>
+                </@linkTag>
+            </ul>
+        </section>
+
         <section id="write" class="container markdown">
             ${sheet.formatContent}
         </section>

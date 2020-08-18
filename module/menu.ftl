@@ -3,7 +3,9 @@
     <div class="container">
         <!-- TODO: 网站 Logo -->
         <div class="logo">
-            <h2 onclick="to('/')">${settings.logo!blog_title}</h2>
+            <a href="${blog_url!}">
+                <h2>${settings.logo!blog_title}</h2>
+            </a>
             <span class="iconfont more">&#xe8af;</span>
         </div>
 

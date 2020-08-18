@@ -10,11 +10,25 @@
     <@cover.layout img="${settings.journals_cover!}" title="日志" subtitle="" />
 
     <main>
-        <section class="container">
+        <section id="journals" class="container">
+            <ul>
+                <#list journals.content as journal>
+                    <li>
+                        <div class="journal-head">
+                            <h4>${journal.createTime?string('yyyy.MM.dd hh:mm:ss')}</h4>
+                            <span>${journal.id!}楼</span>
+                        </div>
+                        <hr>
+                        <p>${journal.content!}</p>
+                    </li>
+                    <hr>
+                </#list>
+            </ul>
         </section>
         <@paginationTag method="journals" page="${journals.number}" total="${journals.totalPages}" display="3">
             <#include "module/pagination.ftl">
         </@paginationTag>
+
     </main>
 
 <#-- Page Footer -->

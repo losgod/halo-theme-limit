@@ -36,7 +36,6 @@
     <#-- Page Main Content -->
     <#nested >
 
-    <@global.footer />
     </body>
     </html>
 </#macro>

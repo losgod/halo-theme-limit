@@ -7,5 +7,5 @@ description: 用于开发自有主题的基础内容
 logo:
 website: https://github.com/losgod/halo-theme-limit.git
 repo: https://github.com/losgod/halo-theme-limit.git
-version: 0.6.9
+version: 0.8.1
 require: 1.3.0

@@ -7,7 +7,7 @@
 
 <#-- Page Cover -->
     <#import "module/cover.ftl" as cover>
-    <@cover.layout img="${settings.tag_cover!}" title="${tag.name!}" subtitle="" />
+    <@cover.layout img="${settings.tag_cover!}" title="标签「${tag.name!''}」" subtitle="" />
 
     <main>
         <section id="articles">
