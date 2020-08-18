@@ -10,10 +10,11 @@
                 <div class="content">
 
                     <div class="post-head">
-                        <h2>${post.title!}</h2>
-                        <#if post.topPriority gt 0>
-                            <div class="top-post iconfont">&#xe8c9;</div>
-                        </#if>
+                        <h2>${post.title!}
+                            <#if post.topPriority gt 0>
+                                <span class="top-post iconfont">&#xe8c9;</span>
+                            </#if>
+                        </h2>
                     </div>
                     <#-- Post Tags list. -->
                     <#if post.tags?? && post.tags?size gt 0>
