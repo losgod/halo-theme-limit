@@ -20,7 +20,7 @@ index:
       name: index_cover
       label: 首页头部装饰图
       type: attachment
-      default: https://s1.ax1x.com/2020/08/12/ajBvxf.jpg
+      default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-bg.jpg
     custom_info:
       name: custom_info
       label: 自定义信息
@@ -30,8 +30,14 @@ index:
       name: default_pic
       label: 默认图片
       type: attachment
-      default: https://s1.ax1x.com/2020/08/12/ajBzM8.jpg
+      default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-bg.jpg
       description: '网站默认图片, 所有使用图片的位置, 如果没有设置, 将默认为此图片。'
+    default_avatar:
+      name: default_pic
+      label: 默认头像
+      type: attachment
+      default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-avatar.jpeg
+      description: '网站默认头像, 所有使用头像的位置, 如果没有设置, 将默认为此图片。'
 website:
   label: 网站设置
   items:
@@ -52,27 +58,27 @@ cover:
       name: archives_cover
       label: 归档页大图
       type: attachment
-      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
+      default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-bg.jpg
     journals_cover:
       name: journals_cover
       label: 日志页大图
       type: attachment
-      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
+      default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-bg.jpg
     category_cover:
       name: category_cover
       label: 分类页大图
       type: attachment
-      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
+      default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-bg.jpg
     search_cover:
       name: search_cover
       label: 查询页大图
       type: attachment
-      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
+      default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-bg.jpg
     tag_cover:
       name: tag_cover
       label: 标签页大图
       type: attachment
-      default: https://cdn.jsdelivr.net/gh/hshanx/static@v1.0.2/default-bg.jpeg
+      default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-bg.jpg
 sns:
   label: 社交资料
   items:
