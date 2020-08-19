@@ -21,6 +21,13 @@
     &:before {
       content: '\00A7 ';
     }
+
+    @media screen and (max-width: 767px) {
+      text-align: left;
+      &:before {
+        content: '';
+      }
+    }
   }
 
   h4, h5, h6 {
@@ -129,12 +136,14 @@
     cursor: copy;
     background-color: #fff2cf;
   }
-  pre, code, pre code {
+  code, pre code {
     font-family: 'CodeFont', Consolas, monospace, sans-serif;
     overflow-x: scroll;
   }
 
   code:not(.hljs) {
+    font-size: 0.8em;
+
     padding: 0.2em 0.5em;
     background-color: #dddddd;
     border-radius: 6px;

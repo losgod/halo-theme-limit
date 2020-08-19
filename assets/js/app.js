@@ -50,8 +50,10 @@ function codeCopy() {
                 window.getSelection().addRange(range);
                 document.execCommand('copy');
                 window.getSelection().removeAllRanges();
+
+                Notice.message('复制成功', 'success');
             } catch (e) {
-                console.error('复制失败')
+                Notice.message('复制失败，请手动复制','warn');
             }
         };
     });

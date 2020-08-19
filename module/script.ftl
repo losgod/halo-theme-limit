@@ -1,5 +1,6 @@
 <#-- Page Script -->
 <script src="${theme_base!}/assets/dist/app.min.js"></script>
+<script src="${theme_base!}/assets/js/Message.js"></script>
 
 <script>
     const controller = new ScrollMagic.Controller();

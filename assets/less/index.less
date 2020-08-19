@@ -186,8 +186,14 @@ header#menu {
       flex-direction: row;
 
       font-size: 1rem;
-      font-weight: bolder;
+      font-weight: bold;
       list-style-type: none;
+
+      @media screen and (max-width: 767px) {
+        font-size: 0.8rem;
+        font-weight: normal;
+        line-height: 2.4rem;
+      }
 
       li {
         @media screen and (min-width: 768px) {
@@ -814,6 +820,94 @@ form#search {
         font-size: 1rem;
       }
     }
+  }
+}
+
+div.notice {
+  position: fixed;
+  z-index: 8000;
+  top: 0;
+  width: 100%;
+
+  background-color: #00000000;
+  pointer-events: none;
+
+  display: flex;
+  flex-direction: column;
+
+  div.message {
+    position: relative;
+
+    &:first-child {
+      margin-top: 5rem;
+    }
+
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid #dddddd;
+    background-color: #efefef;
+
+    box-shadow: 0 0 36px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+  }
+
+  @keyframes fade {
+    from {
+      top: -20px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes in {
+    from {
+      top: -20px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes out {
+    from {
+      top: 0;
+      opacity: 1;
+    }
+    to {
+      top: -20px;
+      opacity: 0;
+    }
+  }
+
+  div.in {
+    animation: in 300ms ease-in;
+  }
+
+  div.out {
+    animation: out 300ms ease-out;
+  }
+
+  div.success {
+    border: 1px solid #0bff0b;
+    background-color: #b3ffa3;
+    color: #009936;
+  }
+
+  div.warn {
+    border: 1px solid #ffe64d;
+    background-color: #fffaac;
+    color: #b19500;
+  }
+
+  div.error {
+    border: 1px solid #ff0909;
+    background-color: #ff8b8b;
+    color: #d00000;
   }
 }
 
