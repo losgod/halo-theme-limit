@@ -1,7 +1,7 @@
 
 <#include "module/macro.ftl">
 <#-- Post Page Template -->
-<@layout title="${sheet.title} - ${blog_title!}">
+<@layout title="${sheet.title!}-${blog_title!}">
 
 <#-- Top Menu -->
     <#include "module/menu.ftl">

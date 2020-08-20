@@ -5,7 +5,7 @@
             <article class="new-post-list" onclick="to('${post.fullPath!}');">
                 <div class="background">
                     <img src="${(post.thumbnail?? && post.thumbnail != "")?string(post.thumbnail, settings.default_pic)}"
-                         alt=""/>
+                         alt="${post.title!}"/>
                 </div>
                 <div class="content">
 

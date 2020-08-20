@@ -7,7 +7,7 @@
         </div>
         <div class="title">
             <h1>${title!}</h1>
-            <h2>${subtitle!}</h2>
+            <h3>${subtitle!}</h3>
             <#nested >
         </div>
     </header>

@@ -1,6 +1,6 @@
 <#include "module/macro.ftl">
 <#-- 只包含 Menu 的模板 -->
-<@layout title="404 - ${blog_title!}">
+<@layout title="404-${blog_title!}">
 <#-- Top Menu -->
     <#include "module/menu.ftl">
 

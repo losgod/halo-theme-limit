@@ -33,7 +33,7 @@ index:
       default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-bg.jpg
       description: '网站默认图片, 所有使用图片的位置, 如果没有设置, 将默认为此图片。'
     default_avatar:
-      name: default_pic
+      name: default_avatar
       label: 默认头像
       type: attachment
       default: https://cdn.jsdelivr.net/gh/losgod/halo-theme-limit/assets/img/default-avatar.jpeg

@@ -21,7 +21,7 @@
                         <hr>
                         <p>${journal.content!}</p>
                     </li>
-                    <hr>
+<#--                    <hr>-->
                 </#list>
             </ul>
         </section>

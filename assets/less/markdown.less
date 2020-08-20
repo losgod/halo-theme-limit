@@ -132,10 +132,15 @@
     margin: 0.5em 0;
     border-radius: 6px;
   }
-  pre > code.hljs:hover {
-    cursor: copy;
-    background-color: #fff2cf;
+  pre > code.hljs {
+    border-radius: 12px;
+    transition: background-color 300ms ease-in-out;
+    &:hover {
+      cursor: copy;
+      background-color: #fff2cf;
+    }
   }
+
   code, pre code {
     font-family: 'CodeFont', Consolas, monospace, sans-serif;
     overflow-x: scroll;

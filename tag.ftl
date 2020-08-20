@@ -1,6 +1,6 @@
 <#include "module/macro.ftl">
 <#-- Post Page Template -->
-<@layout title="分类-${blog_title!}">
+<@layout title="${tag.name!''}-${blog_title!}">
 
 <#-- Top Menu -->
     <#include "module/menu.ftl">
