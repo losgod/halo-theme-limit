@@ -2,7 +2,7 @@ index:
   label: 首页设置
   items:
     logo:
-      name: title
+      name: logo
       label: 博客文字标志
       type: text
       placeholder: 'Blog Logo'
