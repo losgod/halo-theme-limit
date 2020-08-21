@@ -21,6 +21,7 @@
         <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
 
         <!-- Loading JavaScript Library -->
+        <script src="//cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/marked@1.1.1/marked.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/gsap@2.1.3/umd/TweenMax.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/scrollmagic@2.0.7/scrollmagic/minified/ScrollMagic.min.js"></script>

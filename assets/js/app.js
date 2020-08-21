@@ -1,7 +1,3 @@
-/**
- * Index Page JavaScript
- */
-
 /* ================= 加载到 script 时执行 ================== */
 
 // Menu Active Controller
@@ -21,6 +17,8 @@ document.querySelector('span.more').onclick = function () {
     const menu = document.querySelector('ul#pageMenu');
     menu.classList.contains('show') ? menu.classList.remove('show') : menu.classList.add('show');
 };
+
+/* ================= 页面功能方法 ================== */
 
 // Page Menu Search Button Controller
 function searchController() {
@@ -53,9 +51,64 @@ function codeCopy() {
 
                 Notice.message('复制成功', 'success');
             } catch (e) {
-                Notice.message('复制失败，请手动复制','warn');
+                Notice.message('复制失败，请手动复制', 'warn');
             }
         };
+    });
+}
+
+// 获取自定义文本信息
+function getCustomContent(url) {
+    fetch(url, {method: 'GET', mode: 'cors'})
+        .then(res => res.text())
+        .then(res => {
+            document.querySelector('div#customInfo').innerHTML = marked(res);
+            hljs.initHighlighting();
+            codeCopy();
+        })
+        .catch(err => {
+            document.querySelector('section#info').style.display = 'none';
+            console.error('自定义文本信息请求失败');
+            console.error(err);
+        });
+}
+
+// 页面跳转
+function to(url) {
+    if (url === '') {
+        return;
+    }
+    window.location.href = url;
+}
+
+// 显示建站时间
+function showRunningTime(time) {
+    const running = document.querySelector('span#running');
+
+    const BirthDay = new Date(time), today = new Date();
+    let timeOld = (today.getTime() - BirthDay.getTime()),
+        daysOld = timeOld / (24 * 60 * 60 * 1000);
+
+    running.innerText = Math.floor(daysOld) + "天";
+}
+
+// 页面 Cover 向下滑动
+function pageDown() {
+    // 高度大于 300 隐藏
+    const down = document.querySelector('div#down');
+    window.addEventListener('scroll', _.debounce(() => {
+        if (window.scrollY > 300) {
+            down.classList.add('hidden');
+        } else {
+            down.classList.remove('hidden');
+        }
+    }, 500));
+
+    down.addEventListener('click', () => {
+        window.scrollTo({
+            top: 300,
+            behavior: "smooth",
+        });
     });
 }
 
@@ -120,46 +173,12 @@ function postListScroll() {
         });
 }
 
-// 获取自定义文本信息
-function getCustomContent(url) {
-    fetch(url, {method: 'GET', mode: 'cors'})
-        .then(res => res.text())
-        .then(res => {
-            document.querySelector('div#customInfo').innerHTML = marked(res);
-            hljs.initHighlighting();
-            codeCopy();
-        })
-        .catch(err => {
-            document.querySelector('section#info').style.display = 'none';
-            console.error('自定义文本信息请求失败');
-            console.error(err);
-        });
-}
-
-// 页面跳转
-function to(url) {
-    if (url === '') {
-        return;
-    }
-    window.location.href = url;
-}
-
-// 显示建站时间
-function showRunningTime(time) {
-    const running = document.querySelector('span#running');
-
-    const BirthDay = new Date(time), today = new Date();
-    let timeOld = (today.getTime() - BirthDay.getTime()),
-        daysOld = timeOld / (24 * 60 * 60 * 1000);
-
-    running.innerText = Math.floor(daysOld) + "天";
-}
-
 /* ================= 页面加载成功后执行 ================== */
 window.addEventListener('load', () => {
     if (document.querySelector('header#welcome') !== null) {
         coverPin();
         titleScroll();
+        pageDown();
     }
 
     searchController();

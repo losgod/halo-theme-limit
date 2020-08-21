@@ -380,6 +380,35 @@ header#welcome {
       opacity: 1 !important;
     }
   }
+
+  @keyframes blink {
+    0% {
+      bottom: 2.8rem;
+      opacity: 0;
+    }
+    90% {
+      bottom: 1.8rem;
+      opacity: 1;
+    }
+    100% {
+      bottom: 2rem;
+      opacity: 1;
+    }
+  }
+
+  #down {
+    position: absolute;
+    bottom: 2rem;
+
+    animation: blink 1300ms infinite ease-in;
+
+    font-size: 3rem;
+    //font-weight: bold;
+    color: var(--white-font-color);
+
+    cursor: pointer;
+    user-select: none;
+  }
 }
 
 /* Page Index's Main Content Style */
