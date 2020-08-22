@@ -28,6 +28,13 @@
             ${post.formatContent}
         </section>
         <hr class="container">
+        <section id="post-copyright" class="markdown container">
+            <blockquote>
+                <p>COPYRIGHT: 采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">知识共享署名4.0</a> 国际许可协议进行许可</p>
+                <p>LINKS: <a href="${post.fullPath}">${post.fullPath}</a></p>
+            </blockquote>
+        </section>
+        <hr class="container">
         <section id="post-pagination" class="container">
             <#-- Pagination -->
             <div class="prev-post">
