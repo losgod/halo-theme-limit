@@ -16,6 +16,11 @@
                 </#list>
             </#if>
         </div>
+        <div class="post-foot">
+            <div><span class="iconfont">&#xe8b4;</span> <span>${post.createTime?string("yyyy-MM-dd")}</span></div>
+            <div><span class="iconfont">&#xe8bf;</span> <span>${post.visits!}</span></div>
+            <div><span class="iconfont">&#xe8ba;</span> <span>${post.commentCount}</span></div>
+        </div>
     </@cover.layout>
 
     <main>
