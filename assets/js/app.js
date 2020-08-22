@@ -58,16 +58,32 @@ function codeCopy() {
 }
 
 // 获取自定义文本信息
+function initCustomInfo(source) {
+    document.querySelector('div#customInfo').innerHTML = marked(source);
+    hljs.initHighlighting();
+    codeCopy();
+}
 function getCustomContent(url) {
+    const cache = localStorage.getItem('readme');
+    if (cache !== null && cache !== '') {
+        let readme = JSON.parse(cache);
+
+        // 7200000 2小时。2小时内不重复请求 Readme 文件
+        if (Date.now() - readme.time < 7200000) {
+            initCustomInfo(readme.source);
+            return;
+        }
+    }
+    // 请求 Readme
     fetch(url, {method: 'GET', mode: 'cors'})
         .then(res => res.text())
         .then(res => {
-            document.querySelector('div#customInfo').innerHTML = marked(res);
-            hljs.initHighlighting();
-            codeCopy();
+            localStorage.setItem('readme', JSON.stringify({source: res, time: Date.now()}));
+
+            initCustomInfo(res);
         })
         .catch(err => {
-            document.querySelector('section#info').style.display = 'none';
+            document.querySelector('section#info').classList.add('hidden');
             console.error('自定义文本信息请求失败');
             console.error(err);
         });
