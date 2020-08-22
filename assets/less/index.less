@@ -159,10 +159,14 @@ header#menu {
 
   color: var(--black-font-color);
 
-  //background-color: rgba(255, 251, 240, 0.7); // 茶白 70%
-  //backdrop-filter: saturate(180%) blur(20px); // 背景高斯模糊
   background-color: var(--background-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  @supports (-webkit-backdrop-filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px)) {
+    background-color: rgba(255, 251, 240, 0.7); // 茶白 70%
+    backdrop-filter: saturate(180%) blur(20px); // 背景高斯模糊
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+  }
 
   div.container {
     display: flex;
