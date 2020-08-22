@@ -112,7 +112,42 @@ function pageDown() {
     });
 }
 
+function hitokoto() {
+    const dom = document.querySelector('div#customTitle').querySelector('h2');
+    const cache = sessionStorage.getItem('hitokoto');
+    if (cache !== null && cache !== '') {
+        dom.innerText = cache;
+        return;
+    }
+    fetch('//v1.hitokoto.cn/?c=c&c=d&c=i&c=k&encode=json', {method: 'GET', mode: "cors"})
+        .then(res => res.json())
+        .then(res => {
+            const text = `${res.hitokoto} - ${res.from ? `《${res.from}》` : ''}${res.from_who ? res.from_who : ''}`;
+            sessionStorage.setItem('hitokoto', text);
+            dom.innerText = text;
+        })
+        .catch(err => {
+            console.error('「一言」请求失败');
+            console.error(err);
+            dom.innerText = '学而不思则罔，思而不学则殆。 - 《论语》 孔子';
+        });
+}
+
 /* ================= 页面动画 ================== */
+
+function titleAnimation() {
+    const path = document.querySelector('path#pathTitle');
+    if (path === null) {
+        return
+    }
+
+    const length = path.getTotalLength();
+
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+
+    TweenMax.to(path, 5, {strokeDashoffset: 0});
+}
 
 // 页面封面 视差效果
 function coverPin() {
@@ -179,6 +214,11 @@ window.addEventListener('load', () => {
         coverPin();
         titleScroll();
         pageDown();
+    }
+
+    if (document.querySelector('div#customTitle') !== null) {
+        titleAnimation();
+        hitokoto();
     }
 
     searchController();

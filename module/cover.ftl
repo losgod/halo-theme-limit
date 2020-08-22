@@ -6,8 +6,13 @@
             <img src="${(img?? && img != "")?string(img, settings.default_pic)}" alt="">
         </div>
         <div class="title">
-            <h1>${title!}</h1>
+            <#if title?? && title != "">
+                <h1>${title!}</h1>
+            </#if>
+            <#if subtitle?? && subtitle != "">
             <h3>${subtitle!}</h3>
+            </#if>
+
             <#nested >
         </div>
         <div id="down">
