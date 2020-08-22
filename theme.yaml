@@ -3,9 +3,9 @@ name: limit
 author:
   name: losgod
   website: https://losgod.xin
-description: 用于开发自有主题的基础内容
-logo:
+description: 「Limit」少即是多
+logo: //cn.gravatar.com/avatar/a0a99550658c1738878835894e3cee41?s=256&d=mm
 website: https://github.com/losgod/halo-theme-limit.git
 repo: https://github.com/losgod/halo-theme-limit.git
-version: 0.8.1
+version: 0.9.6
 require: 1.3.0
