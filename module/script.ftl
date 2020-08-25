@@ -15,6 +15,7 @@
     });
     <#if is_post?? || is_sheet??>
     hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
     </#if>
     <#if settings.TimeStatistics??>
     showRunningTime('${settings.TimeStatistics}');

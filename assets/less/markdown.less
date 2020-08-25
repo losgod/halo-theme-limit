@@ -103,7 +103,7 @@
   }
 
   // Table Style
-  table {
+  table:not(.hljs-ln) {
     width: 100%;
     border-collapse: collapse;
 
@@ -169,11 +169,36 @@
         cursor: pointer;
       }
     }
-  }
-  pre > code.hljs {
-    max-height: 25em;
-    font-size: 1em;
-    line-height: 1.25em;
+
+    code.hljs {
+      max-height: 25em;
+      font-size: 1em;
+
+      .hljs-ln {
+        width: 100%;
+        line-height: 1.5;
+
+        //tr:nth-child(2n) {
+        //  background-color: #fff3d4;
+        //}
+        tr:hover {
+          background-color: #fff1ca;
+        }
+
+        td.hljs-ln-number {
+          user-select: none;
+          text-align: center;
+          color: #ccc;
+          border-right: 1px solid #CCC;
+          vertical-align: top;
+          padding-right: 5px;
+        }
+        td.hljs-ln-code {
+          padding-left: 0.5em;
+        }
+
+      }
+    }
   }
 
   code, pre code {

@@ -19,6 +19,7 @@
         <link rel="stylesheet"
               href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/solarized-light.min.css">
         <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script>
 
         <!-- Loading JavaScript Library -->
         <script src="//cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
