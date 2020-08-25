@@ -131,25 +131,61 @@
   }
 
   // Code Style
-  pre > code.hljs {
-    border-radius: 6px;
-    transition: background-color 300ms ease-in-out;
-    &:hover {
-      cursor: copy;
-      background-color: #fff2cf;
+  pre {
+    background-color: #3f3f3f;
+    border-radius: 8px;
+    margin: 0.5em 0;
+
+    div.code-top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-right: 1em;
+
+      font-size: 0.8em;
+      line-height: 2em;
+      height: 2em;
+      color: var(--white-font-color);
+
+      div span {
+        display: inline-block;
+        width: 0.8em;
+        height: 0.8em;
+        border-radius: 50%;
+        margin-left: 0.5em;
+
+        &:nth-child(1n) {
+          background-color: red;
+        }
+        &:nth-child(2n) {
+          background-color: yellow;
+        }
+        &:nth-child(3n) {
+          background-color: green;
+        }
+      }
+
+      div {
+        cursor: pointer;
+      }
     }
+  }
+  pre > code.hljs {
+    max-height: 25em;
+    font-size: 1em;
+    line-height: 1.25em;
   }
 
   code, pre code {
     font-family: 'CodeFont', Consolas, monospace, sans-serif;
-    overflow-x: auto;
+    overflow: auto;
   }
 
   code:not(.hljs) {
     font-size: 0.8em;
 
     padding: 0.2em 0.5em;
-    background-color: #dddddd;
+    background-color: #dfdfdf;
     border-radius: 6px;
   }
 

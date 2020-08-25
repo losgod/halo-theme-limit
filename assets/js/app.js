@@ -38,22 +38,30 @@ function searchController() {
 }
 
 // Pre Code Add Copy Function
-function codeCopy() {
-    document.querySelectorAll('pre > code').forEach(item => {
-        item.onclick = function () {
-            try {
-                const range = document.createRange();
-                range.selectNode(item);
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(range);
-                document.execCommand('copy');
-                window.getSelection().removeAllRanges();
+function copy(item) {
+    try {
+        const range = document.createRange();
+        range.selectNode(item);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
 
-                Notice.message('复制成功', 'success');
-            } catch (e) {
-                Notice.message('复制失败，请手动复制', 'warn');
-            }
-        };
+        Notice.message('复制成功', 'success');
+    } catch (e) {
+        Notice.message('复制失败，请手动复制', 'warn');
+    }
+}
+function preCodeStyle() {
+    document.querySelectorAll('pre').forEach(item => {
+        const code = item.querySelector('code');
+        let codeTop = document.createElement('div');
+        codeTop.classList.add('code-top');
+        codeTop.innerHTML = '<div><span></span><span></span><span></span></div><div class="copy">COPY</div>';
+
+        item.insertBefore(codeTop,code);
+
+        codeTop.querySelector('div.copy').addEventListener('click', () => copy(code));
     });
 }
 
@@ -240,6 +248,6 @@ window.addEventListener('load', () => {
     searchController();
     mainScroll();
 
-    codeCopy();
+    preCodeStyle();
     highlightMenu();
 });
