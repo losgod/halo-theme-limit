@@ -69,21 +69,22 @@ function preCodeStyle() {
 function initCustomInfo(source) {
     document.querySelector('div#customInfo').innerHTML = marked(source);
     hljs.initHighlighting();
-    codeCopy();
+    hljs.initLineNumbersOnLoad();
 }
 function getCustomContent(url) {
     const cache = localStorage.getItem('readme');
     if (cache !== null && cache !== '') {
         let readme = JSON.parse(cache);
 
-        // 7200000 2小时。2小时内不重复请求 Readme 文件
+        // 7200000 = 2小时。2小时内不重复请求 Readme 文件
         if (Date.now() - readme.time < 7200000) {
             initCustomInfo(readme.source);
             return;
         }
     }
+    console.log('request Readme');
     // 请求 Readme
-    fetch(url, {method: 'GET', mode: 'cors'})
+    fetch(url, {method: 'GET', mode: "cors"})
         .then(res => res.text())
         .then(res => {
             localStorage.setItem('readme', JSON.stringify({source: res, time: Date.now()}));
