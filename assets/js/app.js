@@ -70,6 +70,7 @@ function initCustomInfo(source) {
     document.querySelector('div#customInfo').innerHTML = marked(source);
     hljs.initHighlighting();
     hljs.initLineNumbersOnLoad();
+    preCodeStyle();
 }
 function getCustomContent(url) {
     const cache = localStorage.getItem('readme');
@@ -249,6 +250,5 @@ window.addEventListener('load', () => {
     searchController();
     mainScroll();
 
-    preCodeStyle();
     highlightMenu();
 });
