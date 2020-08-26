@@ -83,7 +83,6 @@ function getCustomContent(url) {
             return;
         }
     }
-    console.log('request Readme');
     // 请求 Readme
     fetch(url, {method: 'GET', mode: "cors"})
         .then(res => res.text())
