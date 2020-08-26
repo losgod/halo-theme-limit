@@ -33,6 +33,11 @@
                 <#include "icon/rss.ftl">
             </a>
         </#if>
+        <#if settings.steam??>
+            <a href="${settings.steam!}" class="circle" target="_blank" rel="noopener" title="RSS">
+                <#include "icon/steam.ftl">
+            </a>
+        </#if>
     </div>
 
     <div class="badge">

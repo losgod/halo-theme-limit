@@ -16,4 +16,4 @@
 
 ## 注意
 
-当前版本基于 Halo 1.3.2 ， 并且仅适用于此版本，后续是否更新暂定。如有需要请自行 Fork 更改。有看不懂的地方可提交 Issues 或是发送邮件到 [wangcnkym@gmail.com](mailto:wangcnkym@gmail.com) 
+当前版本基于 Halo 1.3.2 ，适用于此版本，后续是否更新暂定。如有需要请自行 Fork 更改。有看不懂的地方可提交 Issues 或是发送邮件到 [wangcnkym@gmail.com](mailto:wangcnkym@gmail.com) 

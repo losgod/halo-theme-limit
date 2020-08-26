@@ -118,3 +118,8 @@ sns:
       label: QQ
       type: text
       placeholder: '只需填入 QQ 号即可'
+    steam:
+      name: steam
+      label: Steam
+      type: text
+      placeholder: '需填入 Steam 用户完整地址'
