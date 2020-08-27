@@ -137,6 +137,7 @@ function pageDown() {
     });
 }
 
+// 获取一言
 function hitokoto() {
     const dom = document.querySelector('div#customTitle').querySelector('h2');
     const cache = sessionStorage.getItem('hitokoto');
@@ -184,7 +185,6 @@ function coverPin() {
         triggerElement: cover,
         triggerHook: 'onLeave',
     })
-        // .addIndicators({ name: 'cover' })
         .setPin(cover, {pushFollowers: false})
         .addTo(controller);
 }
@@ -200,7 +200,6 @@ function titleScroll() {
         triggerHook: 'onLeave',
         offset: '-200%',
     })
-        // .addIndicators({ name: 'title' })
         .setTween(TweenMax.fromTo(title, 0.2, {opacity: 1}, {opacity: 0}))
         .addTo(controller);
 }
@@ -213,7 +212,6 @@ function mainScroll() {
         triggerElement: main,
         triggerHook: 'onEnter',
     })
-        // .addIndicators()
         .setTween(TweenMax.fromTo(main, 0.2, {opacity: 0}, {opacity: 1}))
         .addTo(controller);
 }
@@ -227,7 +225,6 @@ function postListScroll() {
                 triggerElement: item,
                 triggerHook: 'onEnter',
             })
-                // .addIndicators({ name: `post: ${index}` })
                 .setTween(TweenMax.fromTo(item, 0.3, {opacity: 0, y: '30px'}, {opacity: 1, y: 0}))
                 .addTo(controller);
         });
