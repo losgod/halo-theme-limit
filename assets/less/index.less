@@ -408,15 +408,15 @@ header#welcome {
 
   @keyframes blink {
     0% {
-      bottom: 2.8rem;
+      transform: translateY(-1rem);
       opacity: 0;
     }
     90% {
-      bottom: 1.8rem;
+      transform: translateY(0.2rem);
       opacity: 1;
     }
     100% {
-      bottom: 2rem;
+      transform: translateY(0);
       opacity: 1;
     }
   }
@@ -428,7 +428,6 @@ header#welcome {
     animation: blink 1300ms infinite ease-in;
 
     font-size: 3rem;
-    //font-weight: bold;
     color: var(--white-font-color);
 
     cursor: pointer;
