@@ -8,7 +8,7 @@
 
 <#-- Page Cover -->
     <#import "module/cover.ftl" as cover>
-    <@cover.layout img="${sheet.thumbnail!}" title="${sheet.title}" subtitle="" />
+    <@cover.layout img="${sheet.thumbnail!}" title="${sheet.title}" subtitle="${sheet.summary}" />
 
     <main>
         <section id="write" class="container markdown">
