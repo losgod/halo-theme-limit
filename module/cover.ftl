@@ -5,7 +5,7 @@
         <div class="cover">
             <img src="${(img?? && img != "")?string(img, settings.default_pic)}" alt="">
         </div>
-        <div class="title">
+        <div class="title container">
             <#if title?? && title != "">
                 <h1>${title!}</h1>
             </#if>
